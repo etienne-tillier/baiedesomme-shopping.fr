@@ -1,115 +1,157 @@
-# Brief de génération de site (niche-starter)
+## Description
+## Concept du projet
 
-Ce fichier est le brief unique à remplir avant d'envoyer le projet à l'IA.
-L'agent doit lire d'abord `CLAUDE.md`, puis ce fichier.
+**baiedesomme-shopping.fr** est un site de conseil mode et styling destiné principalement aux femmes. Il se positionne comme un guide complet pour résoudre toutes les problématiques vestimentaires du quotidien : comment s'habiller pour une soirée, quelles chaussures associer à une tenue, comment adapter son style selon les conditions météo ou l'occasion.
 
----
+## Public cible et objectif
 
-## 1) Infos projet
+Le site s'adresse aux femmes de tous âges qui cherchent des conseils mode pratiques et personnalisés. L'objectif est de créer une plateforme de référence qui répond aux questions concrètes : "Que porter pour séduire ?", "Comment assortir ses accessoires ?", "Quelle tenue pour un rendez-vous galant ?". Le contenu se décline sous forme de guides styling, conseils saisonniers, looks inspirants et réponses aux situations spécifiques de la vie quotidienne. Cette approche permet de générer du trafic qualifié et de monétiser via l'affiliation avec des marques de mode et des plateformes e-commerce.
 
-- `site_name`:
-- `site_domain`:
-- `site_url`:
-- `default_locale`:
-- `site_id` (UUID Supabase):
-- `tier` (`tier1` / `tier2`):
+## Prompt IA
+Tu es un assistant de développement full-stack ET designer UI/UX chargé de configurer et d'adapter un template Next.js pour un nouveau site de contenu.
 
-## 2) Positionnement éditorial
+⚠️ **IMPORTANT - Design Unique Obligatoire** :
+- Chaque site doit avoir un design **COMPLÈTEMENT DIFFÉRENT**
+- **JAMAIS** copier-coller des couleurs d'exemples
+- **TOUJOURS** créer une palette basée sur l'univers émotionnel de la thématique
+- Suivre le workflow : ANALYSE → DESIGN SYSTEM → ARCHITECTURE → DÉVELOPPEMENT
 
-- Thématique:
-- Audience cible:
-- Objectif business:
-- Ton éditorial:
-- Angles à privilégier:
-- Angles interdits:
+## 0. Contexte du projet
+- Nom du projet : Baie de Somme Shopping
+- Domaine : baiedesomme-shopping.fr
+- Type de site : Money site de conseil mode
+- Thématiques : Vêtements, mode féminine, styling, conseils beauté
+- Objectif business : Génération de trafic et monétisation via affiliation mode
+- Audience cible : Femmes 18-45 ans cherchant des conseils mode pratiques
 
-## 3) Arborescence souhaitée
+## 1. Identité visuelle & Design System (PHASE CRITIQUE)
 
-- Pages de navigation (hors blog):
-- Sections homepage attendues:
-- CTA principal:
-- CTA secondaire:
+⚠️ **À FAIRE EN PREMIER, AVANT TOUT CODE**
 
-## 4) Contraintes SEO
+### Univers visuel à créer
+- **5 adjectifs** décrivant l'ambiance du site : Élégant, Accessible, Chaleureux, Inspirant, Moderne
+- **Références visuelles mentales** : Dressing bien organisé, magazines de mode féminins, boutiques parisiennes chics, miroirs dorés, tissus précieux
+- **Émotions à évoquer** chez la visitrice : Confiance en soi, inspiration, sentiment d'être comprise, envie de se faire belle
 
-- Requêtes principales:
-- Entités importantes:
-- Concurrents de référence:
-- Règles de maillage interne spécifiques:
-- URLs legacy à rediriger (si applicable):
-  - Si l'URL contient des caractères encodés (`%C3%A9`, etc.), la décoder d'abord puis slugifier proprement (ne jamais produire des slugs de type `c3a9`/`c3a8`).
+### Palette de couleurs
+⚠️ **NE PAS proposer de codes HEX directement**
 
-## 5) Direction artistique
+À partir de l'univers visuel ci-dessus, l'agent développeur devra :
+1. Identifier les couleurs naturellement associées à ces références (rose poudré, beige nacré, or rosé, blanc cassé)
+2. Créer une palette UNIQUE avec :
+   - Couleur principale (primary) : inspirée du rose poudré sophistiqué
+   - Couleur secondaire (secondary) : beige chaud élégant
+   - Couleur d'accent (accent) : or rosé lumineux
+   - Couleur de fond (background) : blanc crème délicat
+   - Variante hover : version saturée de la couleur principale
+3. Assurer un contraste suffisant pour l'accessibilité
 
-- Univers visuel:
-- Inspirations:
-- Couleurs souhaitées / évitées:
-- Style typographique:
-- Niveau d'animation:
-- Niveau de sobriété (1-10):
+### Typographie
+- Proposer une Google Font adaptée à l'univers féminin et élégant :
+  - Titre principale : Playfair Display ou Lora (élégance classique)
+  - Texte courant : Inter ou Open Sans (lisibilité optimale)
+  - Accents : Dancing Script pour les citations inspirantes
 
-## 6) Assets (R2 / médias)
+## 2. SEO & métadonnées
+- **Titre SEO principal** pour la home : "Conseils Mode Femme | Guide Styling & Tenues - Baie de Somme Shopping"
+- **Méta-description principale** : "Découvrez comment vous habiller selon l'occasion. Guides mode, conseils styling et inspirations tenues pour femmes. Trouvez votre style parfait !"
+- **Open Graph title** : "Votre Guide Mode Personnel | Baie de Somme Shopping"
+- **Open Graph description** : "Conseils mode personnalisés pour toutes les occasions. Inspirez-vous et trouvez votre style idéal avec nos guides styling."
 
-- Bucket/source:
-- Liste images hero:
-- Liste images sections:
-- Liste images guides/blog:
-- Contraintes de ratio/poids:
+## 3. Images pré-générées - À TÉLÉCHARGER ET INTÉGRER
 
-## 7) Contraintes techniques
+Les images suivantes ont été générées et sont disponibles sur le bucket R2. Téléchargez-les et intégrez-les selon les spécifications :
 
-- Le code doit respecter strictement les règles de `CLAUDE.md`.
-- Ne pas modifier les fichiers Core interdits.
-- Pas de `select("*")` ajouté.
-- Pas de faux articles.
-- Aucune page 404.
-- Toute page additionnelle liée (outil, carte, simulateur, etc.) doit être implémentée et réellement remplie.
-- Si une page n'existe pas, aucun lien ne doit pointer vers elle.
-- Tout lien vers le même domaine doit être traité comme lien interne dofollow.
-- Les redirections legacy doivent pointer vers des slugs décodés/normalisés (jamais vers des slugs encodés type `c3a9`).
-- `npm run build` doit passer.
+- **Hero Homepage** : https://pub-3c1bead77fc84e5d93e229fe1a5fb51f.r2.dev/baiedesomme-shopping-com-home-hero-fashion-wardrobe.jpeg
+- **Section Conseils Mode** : https://pub-3c1bead77fc84e5d93e229fe1a5fb51f.r2.dev/baiedesomme-shopping-com-home-conseils-woman-styling.jpeg
+- **Section Occasions** : https://pub-3c1bead77fc84e5d93e229fe1a5fb51f.r2.dev/baiedesomme-shopping-com-home-occasions-evening-dress.jpeg
+- **Section Tendances** : https://pub-3c1bead77fc84e5d93e229fe1a5fb51f.r2.dev/baiedesomme-shopping-com-home-tendances-fashion-accessories.jpeg
+- **Section Témoignages** : https://pub-3c1bead77fc84e5d93e229fe1a5fb51f.r2.dev/baiedesomme-shopping-com-home-temoignages-happy-woman.jpeg
+- **Page À Propos** : https://pub-3c1bead77fc84e5d93e229fe1a5fb51f.r2.dev/baiedesomme-shopping-com-about-hero-fashion-consultant.jpeg
+- **Section Blog** : https://pub-3c1bead77fc84e5d93e229fe1a5fb51f.r2.dev/baiedesomme-shopping-com-blog-hero-fashion-magazine.jpeg
 
-## 8) Données légales à injecter
+## 4. Contenu & structure à mettre en place
 
-- Mentions légales (éditeur):
-- Contact public:
-- DPO/contact RGPD:
-- Hébergeur:
+### Page d'accueil ("/")
+**Sections obligatoires :**
 
----
+1. **Hero** - Image : baiedesomme-shopping-com-home-hero-fashion-wardrobe.jpeg
+   - Titre : "Trouvez la tenue parfaite pour chaque occasion"
+   - Sous-titre : "Conseils mode personnalisés, guides styling et inspirations pour révéler votre style unique"
+   - CTA principal : "Découvrir mes conseils mode"
 
-## 9) Prompt prêt à envoyer à l'IA
+2. **Section Conseils Mode** - Image : baiedesomme-shopping-com-home-conseils-woman-styling.jpeg
+   - Titre : "Des conseils mode adaptés à votre quotidien"
+   - 4 cartes : "Tenues de soirée", "Look professionnel", "Style décontracté", "Tenues de rendez-vous"
 
-Copie/colle ce prompt dans ton agent (Claude/Codex/Gemini) en étant dans ce repo:
+3. **Section Occasions** - Image : baiedesomme-shopping-com-home-occasions-evening-dress.jpeg
+   - Titre : "Une tenue pour chaque moment de votre vie"
+   - Grille d'occasions : Premier rendez-vous, Soirée entre amies, Entretien d'embauche, Mariage, Week-end détente
 
-```text
-Tu es un ingénieur Next.js senior + designer UI/UX.
-Tu travailles dans un projet basé sur niche-starter.
+4. **Section Tendances** - Image : baiedesomme-shopping-com-home-tendances-fashion-accessories.jpeg
+   - Titre : "Les tendances mode du moment"
+   - Carousel des derniers articles de blog avec miniatures
 
-Ordre obligatoire:
-1) Lire CLAUDE.md
-2) Lire instructions.md
-3) Implémenter le site complet en respectant strictement ces deux fichiers.
+5. **Section Témoignages** - Image : baiedesomme-shopping-com-home-temoignages-happy-woman.jpeg
+   - Titre : "Elles ont trouvé leur style grâce à nos conseils"
+   - 3 témoignages avec photos et citations
 
-Contraintes non négociables:
-- Zéro 404
-- Zéro placeholder
-- Aucune modification des fichiers Core interdits
-- Blog 100% Supabase (aucun faux article)
-- ISR egress-safe (revalidate conforme)
-- Toute page additionnelle liée doit exister et être remplie (sinon supprimer le lien)
-- Tout lien du même domaine doit être interne et dofollow
-- Les redirections legacy doivent utiliser des slugs décodés/normalisés (pas de `c3a9`, `c3a8`, etc.)
-- npm run build sans erreur
+### Page À Propos ("/about")
+- **Hero** - Image : baiedesomme-shopping-com-about-hero-fashion-consultant.jpeg
+- Histoire et mission du site
+- Approche conseil mode
+- Équipe de stylistes
 
-Action attendue:
-- Créer/modifier les fichiers autorisés
-- Produire un design distinctif adapté à la thématique
-- Remplir toutes les pages obligatoires avec contenu cohérent
-- Utiliser les assets fournis dans instructions.md
+### Section Blog ("/blog")
+- **Header** - Image : baiedesomme-shopping-com-blog-hero-fashion-magazine.jpeg
+- Catégories : "Tenues par occasion", "Conseils styling", "Tendances", "Accessoires", "Morphologie"
 
-À la fin:
-- Exécuter npm run build
-- Fournir la liste des fichiers modifiés
-- Expliquer brièvement les choix design et SEO effectués
-```
+## 5. Consignes éditoriales
+
+### Ton à respecter
+- **Bienveillant et inclusif** : Toutes les femmes peuvent être élégantes
+- **Pratique et concret** : Conseils applicables immédiatement
+- **Complice et rassurant** : Comprendre les doutes vestimentaires
+- **Inspirant sans intimidant** : Mode accessible à toutes
+
+### Types d'articles attendus
+- **Guides par occasion** : "Comment s'habiller pour un premier rendez-vous"
+- **Conseils morphologie** : "Mettre en valeur sa silhouette"
+- **Tendances accessibles** : "3 façons de porter la tendance du moment"
+- **Solutions problèmes** : "Que porter quand il pleut mais qu'on sort en soirée ?"
+- **Looks inspirants** : "5 tenues chic avec un petit budget"
+
+### Contraintes à éviter
+- Pas de body-shaming ou de jugements
+- Éviter le jargon mode trop technique
+- Ne pas promouvoir uniquement des marques chères
+- Pas de conseils discriminants par âge
+
+## 6. Clusters thématiques
+
+1. **Occasions spéciales** : Soirées, rendez-vous, événements professionnels
+2. **Style par saison** : Looks automne/hiver, printemps/été
+3. **Morphologie et silhouette** : Conseils adaptés à chaque corps
+4. **Accessoires et détails** : Chaussures, bijoux, sacs, maquillage
+5. **Budget et bonnes affaires** : Mode accessible et économique
+
+## 7. Checklist technique
+
+- Configuration `.env` (clés Supabase, SITE_DOMAIN=baiedesomme-shopping.fr, BLOG_API_SECRET)
+- Mise à jour `config/site.ts` avec navigation mode féminine
+- **Création de la palette UNIQUE** dans `app/globals.css` selon méthodologie
+- Logos adaptés au thème mode (`/public/logo.svg`, `/app/icon.svg`)
+- Intégration blog Supabase (filtrage par domaine)
+- Téléchargement et intégration des 7 images pré-générées
+- Vérifier `npm run lint` et `npm run build`
+- Configuration déploiement
+
+## 8. Anti-patterns à éviter
+
+❌ Commencer à coder avant d'avoir créé le design system
+❌ Copier-coller des couleurs d'un exemple existant
+❌ Utiliser les mêmes polices que d'autres sites
+❌ Créer un design "générique"
+❌ Laisser des placeholders de couleurs dans le code final
+❌ Utiliser des images génériques non adaptées à l'audience féminine
+❌ Négliger l'accessibilité des contrastes de couleurs
